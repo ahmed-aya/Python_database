@@ -10,7 +10,7 @@ import sqlite3
 
 class Product(object):
 
-    
+    db_name = 'database.db'
 
     def __init__(self,wind):
         self.wind=wind
@@ -45,7 +45,7 @@ class Product(object):
 
 
     def run_query (self, query, parameters=()):
-        with sqlite3.connect('database.db') as conn:
+        with sqlite3.connect(self.db_name) as conn:
             cursor = conn.cursor()
             query_result= cursor.execute(query,parameters)
             conn.commit()
@@ -123,7 +123,7 @@ class Product(object):
         self.edit_wind.mainloop()
 
     def edit_records(self, new_name,name,new_price,old_price):
-        query = 'UPDATE product SET name=?,price,=? WHERE name=? AND price =?'
+        query = 'UPDATE product SET name=?,price=? WHERE name=? AND price =?'
         parameters = (new_name,new_price,name,old_price)
         self.run_query (query,parameters)
         self.edit_wind.destroy()
