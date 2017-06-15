@@ -1,7 +1,6 @@
-This isnt my code i got it from https://www.youtube.com/channel/UC4KX0hatvRrOVy_D0nPlusg   i keep getting this error
-File "D:\ProgramDevelopment\Python\Project\Python_GUI_IDEL\PythonDatabaseYoutube.py", line 45, in run_query
-   query_result= cursor.execute(query,parameters)
-sqlite3.OperationalError: near ",": syntax error" 
+This isnt my code i got it from https://www.youtube.com/channel/UC4KX0hatvRrOVy_D0nPlusg 
+Author: Krunoslav Čelig
+
 
 from tkinter import *
 from tkinter import ttk
